@@ -18,7 +18,7 @@ public class UserService {
     {
         return userDAO.show();
     }
-    public int GetIdByName(String name){
-        return userDAO.GetIdByName(name);
+    public int GetIdByName(String name,boolean a){
+        return userDAO.GetIdByName(name,a);
     }
 }

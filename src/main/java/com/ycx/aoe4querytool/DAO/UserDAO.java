@@ -24,7 +24,7 @@ public class UserDAO {
     public void setUserMapper(UserMapper userMapper) {
         this.userMapper = userMapper;
     }
-    public int GetIdByName(String name)
+    public int GetIdByName(String name,boolean a)
     {
         HttpClient httpClient = HttpClients.createDefault();
         HttpGet httpGet = new HttpGet("https://aoe4world.com/api/v0/players/search?query="+name+"&exact=true");
@@ -46,7 +46,8 @@ public class UserDAO {
             else
             {
                 int id = players.get(0).get("profile_id").asInt();
-                userMapper.addNewUser(name,id);
+                if(a)
+                    userMapper.addNewUser(name,id);
                 return id;
             }
 

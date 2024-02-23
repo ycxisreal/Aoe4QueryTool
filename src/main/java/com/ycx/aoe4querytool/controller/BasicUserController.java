@@ -24,10 +24,12 @@ public class BasicUserController {
     {
         return userService.show();
     }
+    @GetMapping("/queryId/ycx/{name}")
+    public int queryId_ycx(@PathVariable String name){
+        return userService.GetIdByName(name,true);
+    }
     @GetMapping("/queryId/{name}")
     public int queryId(@PathVariable String name){
-//        userMapper.addNewUser(name,1);
-//        return 1;
-        return userService.GetIdByName(name);
+        return userService.GetIdByName(name,false);
     }
 }

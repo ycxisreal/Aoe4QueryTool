@@ -10,6 +10,6 @@ import java.util.ArrayList;
 public interface UserMapper {
     @Select("select * from users")
     ArrayList<User> show();
-    @Insert("insert IGNORE into users VALUES (#{arg0}, #{arg1})")
+    @Insert("insert into users VALUES (#{arg0}, #{arg1}) ON duplicate KEY UPDATE name = VALUES(name)")
     void addNewUser(String name,int id);
 }
