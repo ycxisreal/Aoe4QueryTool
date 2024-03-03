@@ -12,8 +12,6 @@ import java.util.ArrayList;
 @RequestMapping("/api/user")
 @CrossOrigin
 public class BasicUserController {
-    @Autowired
-    UserMapper userMapper;
     private UserService userService;
     @Autowired
     public void setUserService(UserService userService) {

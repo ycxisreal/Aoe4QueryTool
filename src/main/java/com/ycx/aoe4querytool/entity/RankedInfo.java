@@ -1,33 +1,84 @@
 package com.ycx.aoe4querytool.entity;
 
 public class RankedInfo {
-    private String name;
+    private String modeName;
+    private int season;
     private int rating;
+
     private int maxRating;
     private int maxRating7d;
     private int maxRating1m;
     private int rank;// 排名
     private String rankLevel;
+    private int gameCount;
+    private int winCount;
+    private int loseCount;
+    private int elo;
 
-    public RankedInfo(String name, int rating, int maxRating, int maxRating7d, int maxRating1m, int rank, String rankLevel) {
-        this.name = name;
+    public RankedInfo(String modeName, int season, int rating, int maxRating, int maxRating7d, int maxRating1m, int rank, String rankLevel, int gameCount, int winCount, int loseCount, int elo) {
+        this.modeName = modeName;
+        this.season = season;
         this.rating = rating;
         this.maxRating = maxRating;
         this.maxRating7d = maxRating7d;
         this.maxRating1m = maxRating1m;
         this.rank = rank;
         this.rankLevel = rankLevel;
+        this.gameCount = gameCount;
+        this.winCount = winCount;
+        this.loseCount = loseCount;
+        this.elo = elo;
     }
 
     public RankedInfo() {
     }
 
-    public String getName() {
-        return name;
+    public int getGameCount() {
+        return gameCount;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setGameCount(int gameCount) {
+        this.gameCount = gameCount;
+    }
+
+    public int getWinCount() {
+        return winCount;
+    }
+
+    public void setWinCount(int winCount) {
+        this.winCount = winCount;
+    }
+
+    public int getLoseCount() {
+        return loseCount;
+    }
+
+    public void setLoseCount(int loseCount) {
+        this.loseCount = loseCount;
+    }
+
+    public int getElo() {
+        return elo;
+    }
+
+    public void setElo(int elo) {
+        this.elo = elo;
+    }
+
+    public String getModeName() {
+        return modeName;
+    }
+
+    public void setModeName(String modeName) {
+        this.modeName = modeName;
+    }
+
+    public int getSeason() {
+        return season;
+    }
+
+    public void setSeason(int season) {
+        this.season = season;
     }
 
     public int getRating() {
